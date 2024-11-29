@@ -16,13 +16,13 @@
 </head>
 
 <body>
-    
-    <header class="container-fluid m-0 p-0 bg-black">
-        <nav class="d-flex justify-content-between align-content-center">
+
+    <header class="container-fluid m-0 p-0">
+        <!-- <nav class="d-flex justify-content-between align-content-center">
             <div class="nome">
-                <h1 class="fw-bolder text-success">
-                    Daniel Almeida
-                </h1>
+                <h4 class="fw-bolder text-danger">
+                    Daniel Almeida - Biografia
+                </h4>
             </div>
             <div class="ancoras d-flex align-content-center justify-content-center text-center">
                 <a href="#">Zona 1</a>
@@ -31,39 +31,41 @@
                 <a href="#">Zona 4</a>
                 <a href="#">Zona 5</a>
             </div>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="row pessoal d-flex flex-column align-content-center justify-content-center gap-3">
-            <div class="col-12 text-center">
-                <img src="imagens/Daniel_Almeida_Programador_PHP_Python_SQL.png" alt="dxa_php_python_sql" id="img-dxa">
-            </div>
-            <div class="col-12 text-center">
-                <h1>
-                    Daniel Almeida
-                </h1>
-            </div>
-            <div class="col-12 text-center">
-                <h3>
-                    Junior Full-Stack Developer
-                </h3>
-            </div>
-            <div class="col-12 text-center">
-                <nav>
-                    <a href="#">Linkdin</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Email</a>
-                    <a href="#">link 1</a>
-                    <a href="#">link 2</a>
-                </nav>
-            </div>
-            <div class="col-12 text-center">
-
+        </nav> -->
+        <div class="row pessoal align-content-center justify-content-center">
+            <div class="pessoal-bola d-flex flex-column align-content-center justify-content-center gap-3">
+                <div class="col-12 text-center">
+                    <img src="imagens/Daniel_Almeida_Programador_PHP_Python_SQL.png" alt="dxa_php_python_sql" id="img-dxa">
+                </div>
+                <div class="col-12 text-center">
+                    <h1>
+                        Daniel Almeida
+                    </h1>
+                </div>
+                <div class="col-12 text-center">
+                    <h3>
+                        Junior Full-Stack Developer
+                    </h3>
+                </div>
+                <div class="col-12 text-center">
+                    <nav>
+                        <a href="https://www.linkedin.com/in/danielxalmeida/" target="_blank">Linkdin</a>
+                        <a href="https://github.com/danielxalmeida" target="_blank">GitHub</a>
+                        <a href="mailto:danifica@gmail.com" target="_blank">Email</a>
+                        <a href="https://drive.google.com/file/d/1S1Ns0g6QwEaLSmLVREeOrD6RdACATqJ3/view?usp=sharing" target="_blank">CV PT</a>
+                        <a href="https://drive.google.com/file/d/1-yKM8sWJY8KSAe_N8izbp9ydcDB4jS8p/view?usp=sharing" target="_blank">CV EN</a>
+                        <!-- <a href="imagens/PT.pdf" target="_blank">CV PT</a> -->
+                    </nav>
+                </div>
             </div>
         </div>
 
-        <div class="row about-me my-5">
+    </header>
+
+    <main class="container">
+
+
+        <div class="row about-me mb-5">
             <div class="col-10">
                 <p>Engenheiro de Gestão Industrial, formado na Universidade de Aveiro.</p>
 
@@ -109,10 +111,16 @@
                 </p>
             </div>
         </div>
+
         <div class="row portefolio my-5 d-flex gap-4 justify-content-center">
+            <div class="col-12 p-5" id="oportefolio">
+                <h2>
+                    <marquee behavior="scroll" direction="right">Portefólio</marquee>
+                </h2>
+            </div>
             <div class="card col-md-3 col-sm-5 col-10">
                 <a href="https://www.snupe.pt" target="_blank">
-                    <img src="imagens/Captura de ecrã 2024-11-26 121235.png" alt="">
+                    <img src="imagens/SNUPE_LANDPAGE_GIF.gif" alt="">
                 </a>
                 <p>
                     Landing Page, com formulário de contacto e informações sobre os diferentes produtos.
@@ -124,213 +132,271 @@
             </div>
             <div class="card col-md-3 col-sm-5 col-10">
                 <a href="https://www.snupe.pt" target="_blank">
-                    <img src="imagens/Captura de ecrã 2024-11-26 121235.png" alt="">
+                    <img src="imagens/snupe_store_gif.gif" alt="">
                 </a>
                 <p>
-                    Landing Page, com formulário de contacto e informações sobre os diferentes produtos.
-                    A página incorpora toda a informação relativa aos produtos vendidos e permite ainda o
-                    reencaminhamento para a plataforma de Whatsapp da empresa, diretamente para o seu catálogo de venda
-                    ao público.
-                    Design tal como pedido pelo cliente.
+                    Base de dados para registo de atletas, vendas, produtos, fornecedores, matérias primas.. e muito
+                    mais. <br>
+                    uma base de dados capaz dinâmica, capaz de registar todos os passos, desde a compra e stocks de
+                    componentes até à venda e análise das vendas por cliente, vendedor, produto, mês... <br>
+                    Em resumo, uma mistura entre a minha experiência profissional anterior e os conhecimentos atuais.
                 </p>
             </div>
             <div class="card col-md-3 col-sm-5 col-10">
-                <a href="https://www.snupe.pt" target="_blank">
-                    <img src="imagens/Captura de ecrã 2024-11-26 121235.png" alt="">
+                <a href="#oportefolio">
+                    <img src="imagens/iris_gif.gif" alt="">
                 </a>
                 <p>
-                    Landing Page, com formulário de contacto e informações sobre os diferentes produtos.
-                    A página incorpora toda a informação relativa aos produtos vendidos e permite ainda o
-                    reencaminhamento para a plataforma de Whatsapp da empresa, diretamente para o seu catálogo de venda
-                    ao público.
-                    Design tal como pedido pelo cliente.
+                    Desenvolvimento e proposta para site de bijuteria, com 2 tipos de homepage configuraveis em
+                    backoffice, e toda a base de dados e personalização necessária. <br>
+                    Loja online, em que o comprador é redirecionado para o contacto direto do vendedor. <br>
+
                 </p>
             </div>
             <div class="card col-md-3 col-sm-5 col-10">
-                <a href="https://www.snupe.pt" target="_blank">
-                    <img src="imagens/Captura de ecrã 2024-11-26 121235.png" alt="">
+                <a href="#oportefolio">
+                    <img src="imagens/simulador.gif" alt="">
                 </a>
                 <p>
-                    Landing Page, com formulário de contacto e informações sobre os diferentes produtos.
-                    A página incorpora toda a informação relativa aos produtos vendidos e permite ainda o
-                    reencaminhamento para a plataforma de Whatsapp da empresa, diretamente para o seu catálogo de venda
-                    ao público.
-                    Design tal como pedido pelo cliente.
+                    Desenvolvimento de todo o backoffice de um simulador de custos de obras de renovação, feito em
+                    JavaScript com relcolha de dados em PHP e ligação para Base de dados do cliente.
+                    <br>
+                    O meu primeiro trabalho como freelancer, que seria para incluir num projeto em inicio de
+                    desenvolvimento, sem design definido.
+                    <br>
+                    Simulador muito completo, com 11 etapas e centenas de variaveis e combinações. Um trabalho
+                    desafiante.
+                </p>
+            </div>
+            <div class="card col-md-3 col-sm-5 col-10">
+                <a href="https://www.sebastiaoalves.com" target="_blank">
+                    <img src="imagens/sebastiao.gif" alt="">
+                </a>
+                <p>
+                    Trabalho final do curso de Web Full-Stack.
+                    Um site feito totalmente de raiz, com o respectivo backoffice.
                 </p>
             </div>
         </div>
 
-        <div class="row timeline my-5 d-flex">
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 text-center align-content-center linha-direita">
+        <div class="row timeline my-5 d-flex justify-content-center">
+            <div class="col-12 p-5">
+                <h2>
+                    <marquee behavior="scroll" direction="right">Timeline</marquee>
+                </h2>
+            </div>
+            <div class="col-10 d-flex flex-column flex-md-row align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-direita linha-baixo">
                     <h1>
-                        DATA e Local
+                        2024
                     </h1>
+                    <h6>
+                        Formação
+                    </h6>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <h3>
-                        função/acontecimento
+                        Programação em Python
                     </h3>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        Python | Django | SQL | C
+                        <br>
+                        Aprender Python era um dos meus objectivos para 2024.
+                        <br>
+                        Esta formação ensinou-me a desenvolver desde jogos a sites completos, usando Python, Django e
+                        SQL.
+                        <br>
+                        Como bonus, aprendi ainda a programar em C, complementando assim as minhas competências.
                     </h6>
                 </div>
             </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 linha-direita">
-                    <h3>
-                        função/acontecimento
-                    </h3>
+            <div class="col-10 d-flex flex-column flex-md-row-reverse align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-baixo">
+                    <h1>
+                        2023
+                    </h1>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        Formação
                     </h6>
                 </div>
-                <div class="col-6 text-center align-content-center">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-            </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 text-center align-content-center linha-direita">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12 linha-direita">
                     <h3>
-                        função/acontecimento
+                        Full-Stack Web Developer
                     </h3>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        HTML | CSS | Bootstrap | Java | JavaScript | PHP
+                        <br>
+                        Tempo de aprender e de me tornar programador. <br>
+                        Curso muito prático, com muitos casos reais e exercicios diários. <br>
+                        Aprendi a desenvolver sites do zero e a pensar o meu código backend de forma a atingir o
+                        objetivo do site. <br>
+                        Desenvolvi muitos projetos e muitos sites, sempre com o maior dos detalhes quer a nivel de
+                        front-end como back-end.
                     </h6>
                 </div>
             </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 linha-direita">
-                    <h3>
-                        função/acontecimento
-                    </h3>
+            <div class="col-10 d-flex flex-column flex-md-row align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-direita linha-baixo">
+                    <h1>
+                        2019 - 2024
+                    </h1>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        BOCO SEAFOOD A/S
+                        <br>
+                        Portugal
                     </h6>
                 </div>
-                <div class="col-6 text-center align-content-center">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-            </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 text-center align-content-center linha-direita">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <h3>
-                        função/acontecimento
+                        DIRETOR DE PRODUÇÃO INDUSTRIAL
                     </h3>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        • Coordenação da deslocalização das instalações da Boco Seafood da Dinamarca para Portugal.<br>
+                        • Formação de equipe de gestão e operadores para novo produto.<br>
+                        • Planeamento estratégico de resposta ao mercado.<br>
+                        • Coordenação dos movimentos de importação e exportação, lidando com processos
+                        alfandegários.<br>
+                        • Desenvolvimento de ferramentas de controlo de produção, qualidade e manutenção.<br>
+                        • Melhoria contínua da produtividade e qualidade dos produtos.<br>
+                        • Implementação de estratégias para otimizar processos produtivos e reduzir custos.<br>
                     </h6>
                 </div>
             </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 linha-direita">
-                    <h3>
-                        função/acontecimento
-                    </h3>
+            <div class="col-10 d-flex flex-column flex-md-row-reverse align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-baixo">
+                    <h1>
+                        2019
+                    </h1>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        THE NAVIGATOR COMPANY
                     </h6>
                 </div>
-                <div class="col-6 text-center align-content-center">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-            </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 text-center align-content-center linha-direita">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12 linha-direita">
                     <h3>
-                        função/acontecimento
+                        TÉCNICO DE LEAN
                     </h3>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        • Normalização de processos<br>
+                        • Instruções de trabalho<br>
+                        • Desenvolvi ferramentas de registo e comparação de indicadores de produção<br>
+                        • Desenvolvimento de automatismos de reporte automático<br>
                     </h6>
                 </div>
             </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 linha-direita">
-                    <h3>
-                        função/acontecimento
-                    </h3>
+            <div class="col-10 d-flex flex-column flex-md-row align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-direita linha-baixo">
+                    <h1>
+                        2017 - 2018
+                    </h1>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        POLAR RAAJAT A/S
+                        <br>
+                        Greenland
                     </h6>
                 </div>
-                <div class="col-6 text-center align-content-center">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-            </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 text-center align-content-center linha-direita">
-                    <h1>
-                        DATA e Local
-                    </h1>
-                </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <h3>
-                        função/acontecimento
+                        ENGENHEIRO DE PRODUÇÃO INDUSTRIAL
                     </h3>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        • Planeamento e definição de layouts<br>
+                        • Identificação das capacidades produtivas<br>
+                        • Formação dos quadros para os novos produtos<br>
+                        • Desenvolvimento de novos produtos<br>
+                        • Planeamento e controlo para os diferentes produtos<br>
                     </h6>
                 </div>
             </div>
-            <div class="col-12 d-flex align-content-center justify-content-center entrada-acontecimento my-5">
-                <div class="col-6 linha-direita">
-                    <h3>
-                        função/acontecimento
-                    </h3>
+            <div class="col-10 d-flex flex-column flex-md-row-reverse align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-baixo">
+                    <h1>
+                        2013 - 2017
+                    </h1>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae impedit eveniet temporibus
-                        aliquam asperiores dolorem omnis optio? At beatae laboriosam, debitis inventore molestias sunt,
-                        doloribus ipsum eos dolore iure voluptates!
+                        MAR LUSITANO, PRODUTOS ALIMENTARES, LDA
                     </h6>
                 </div>
-                <div class="col-6 text-center align-content-center">
-                    <h1>
-                        DATA e Local
-                    </h1>
+                <div class="col-md-6 col-12 linha-direita">
+                    <h3>
+                        ENGENHEIRO DE PRODUÇÃO INDUSTRIAL
+                    </h3>
+                    <h6>
+                        • Desenvolvimento de novas linhas de produção e novos produtos<br>
+                        • Planeamento e gestão da produção<br>
+                        • Desenvolvimento e melhoria do processos<br>
+                        • Redução e rentabilização de subprodutos, através de novos produtos e métodos de produção.<br>
+                    </h6>
                 </div>
             </div>
+            <div class="col-10 d-flex flex-column flex-md-row align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-direita linha-baixo">
+                    <h1>
+                        2012 - 2013
+                    </h1>
+                    <h6>
+                        MAR LUSITANO, PRODUTOS ALIMENTARES, LDA
+                    </h6>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3>
+                        MÉTODOS E TEMPOS
+                    </h3>
+                    <h6>
+                        • Definição das capacidades instaladas<br>
+                        • Definição de objetivos de produção<br>
+                        • Instruções de trabalho<br>
+                        • Normalização de processos e padrões de qualidade<br>
+                        • Apuramento de custos de produção<br>
+                        • Optimização de processos<br>
+                    </h6>
+                </div>
+            </div>
+            <div
+                class="col-10 d-flex flex-column flex-md-row-reverse align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-baixo">
+                    <h1>
+                        2011 - 2012
+                    </h1>
+                    <h6>
+                        TEKA PORTUGAL, S.A
+                    </h6>
+                </div>
+                <div class="col-md-6 col-12 linha-direita">
+                    <h3>
+                        ESTÁGIO NO DEPARTAMENTO DE QUALIDADE
+                    </h3>
+                    <h6>
+                        • No departamento de qualidade da Teka, desenvolvi FMEAs para produtos e componentes, tendo em
+                        vista a certificação pelas novas normas ISO 31000<br>
+                        • Paralelamente a este desenvolvimento, implementei novos modelos de relatórios, canais de
+                        comunicação e metodos de organização na secção de metrologia<br>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-10 d-flex flex-column flex-md-row align-content-center justify-content-center entrada-acontecimento my-5">
+                <div class="col-md-6 col-12 text-center align-content-center linha-direita linha-baixo">
+                    <h1>
+                        2007 - 2012
+                    </h1>
+                    <h6>
+                        Universidade de Aveiro
+                        <br>
+                        Licenciatura e Pós-Graduação
+                    </h6>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3>
+                        ENGENHARIA E GESTÃO INDUSTRIAL
+                    </h3>
+                    <h6>
+                        Formação transversal e polivalente, capaz de capacitar para todas as funções e setores
+                        industriais. <br>
+                        O foco na análise de dados e na melhoria continua são um cartão diferenciadora de um EGI. <br>
+                        Um Engenheiro de Gestão Industrial é um Engenheiro muito versátil, capaz de executar de forma exímia, qualquer cargo na indústria. 
+                    </h6>
+                </div>
+            </div>
+
         </div>
 
         <div class="row more justify-content-center my-5">
@@ -360,14 +426,14 @@
                     <a href="#">
                         malito
                     </a>
-                </div>                
+                </div>
                 <div class="d-flex gap-2 justify-content-center">
                     <p>icon</p>
                     <p>email</p>
                     <a href="#">
                         malito
                     </a>
-                </div>                
+                </div>
                 <div class="d-flex gap-2 justify-content-center">
                     <p>icon</p>
                     <p>email</p>
