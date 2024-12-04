@@ -1,25 +1,33 @@
 <?php
 
-
-
+ini_set("include_path", '/home/danielxa/php:' . ini_get("include_path") );
+include('Mail.php');
+$agradecimento = 0;
 if($_POST['email']){
 
-    $name = $_POST['nome'];
-    $email = $_POST['email'];
-    $message = $_POST['texto'];
-
-    // Prepare email body
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-
-    // Email configuration (replace with your actual email settings)
+    require_once "Mail.php";
+    
+    $from = "contact@danielxalmeida.pt";
     $to = "daniel@danielxalmeida.pt";
-    $subject = "Contact Form Submission";
-    $headers = "From: $email";
+    
+    $subject = $_POST['nome'];
+    $body = $_POST['email'] + "<br>" + $_POST['texto'];
+    $host = "mail.danielxalmeida.pt";
+    
+    $username = "contact@danielxalmeida.pt";
+    $password = "gWN&HK^VwN71045?";
+    
+    $headers = array ('From' => $from, 'To' => $to, 'Subject' => $subject);
+    $smtp = Mail::factory('smtp', 
+    array ('host' => $host,
+    'auth' => true,
+    'username' => $username,
+    'password' => $password));
+    
+    $mail = $smtp->send($to, $headers, $body);
 
-    // Send the email
-    mail($to, $subject, $body, $headers);
-
-
+    $agradecimento = 1;
+    
 }
 
 
@@ -74,7 +82,7 @@ if($_POST['email']){
                                 class="contactos"></button></a>
                         <a href="https://github.com/danielxalmeida" target="_blank"><button id="github"
                                 class="contactos"></button></a>
-                        <a href="mailto:danifica@gmail.com" target="_blank"><button id="email"
+                        <a href="mailto:contact@danielxalmeida.pt" target="_blank"><button id="email"
                                 class="contactos"></button></a>
                         <a href="https://drive.google.com/file/d/1S1Ns0g6QwEaLSmLVREeOrD6RdACATqJ3/view?usp=sharing"
                             target="_blank"><button id="cvpt" class="contactos"></button></a>
@@ -435,6 +443,7 @@ if($_POST['email']){
         <div class="row justify-content-center mb-4">
             <div class="col-4 d-flex flex-column gap-2 justify-content-center text-center">
                 <h3 class="">Contactos</h3>
+                <?php if($agradecimento != 1): ?>
                 <form action="" method="POST">
 
                     <p class="">
@@ -454,6 +463,12 @@ O teu perfil é o ideal para esta oportunidade. Podemos falar? " required></text
                     </p>
                     <button class="btn btn-success" type="submit">Contactar</button>
                 </form>
+                <?php else: ?>
+                    <p>
+                        Obrigado pelo seu contacto. <br>
+                        Entrarei em contacto assim que possível. <br>
+                    </p>
+                <?php endif; ?>
             </div>
         </div>
 
