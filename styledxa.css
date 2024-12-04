@@ -99,6 +99,63 @@ body {
     border-right: 4px solid white;
 }
 
+.contactos{
+    border: none;
+    width: 37px !important;
+    height: 37px !important;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contactos:hover{
+    transition-duration: 0.7s;
+}
+
+#linkdin{
+    background-image: url("imagens/linkedin.png");
+}
+#github{
+    background-image: url("imagens/github.png");
+}
+#email{
+    background-image: url("imagens/email.png");
+}
+#cvpt{
+    background-image: url("imagens/cv1.png");
+}
+#cven{
+    background-image: url("imagens/cv2.png");
+}
+
+#pt{
+    background-image: url("imagens/pt2.png");
+}
+
+#en{
+    background-image: url("imagens/en2.png");
+}
+
+#linkdin:hover{
+    background-image: url("imagens/linkedin-logo.png");
+}
+#github:hover{
+    background-image: url("imagens/git2.png");
+}
+#email:hover{
+    background-image: url("imagens/email2.png");
+}
+#cvpt:hover{
+    background-image: url("imagens/cv.png");
+}
+#cven:hover{
+    background-image: url("imagens/cv.png");
+}
+label{
+    text-transform: capitalize;
+}
+
+
 @media screen and (max-width: 767px) {
     .linha-direita {
         border-right: none;

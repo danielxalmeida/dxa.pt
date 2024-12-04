@@ -1,3 +1,29 @@
+<?php
+
+
+
+if($_POST['email']){
+
+    $name = $_POST['nome'];
+    $email = $_POST['email'];
+    $message = $_POST['texto'];
+
+    // Prepare email body
+    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+    // Email configuration (replace with your actual email settings)
+    $to = "daniel@danielxalmeida.pt";
+    $subject = "Contact Form Submission";
+    $headers = "From: $email";
+
+    // Send the email
+    mail($to, $subject, $body, $headers);
+
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="PT">
 
