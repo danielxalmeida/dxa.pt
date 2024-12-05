@@ -6,20 +6,20 @@ require_once("requisitos.php");
 // print_r($_SERVER ["REQUEST_URI"]);
 // echo "</pre>";
 
-
 $rota_completa = $_SERVER["REQUEST_URI"];
 // echo $rota_completa;
-$rota_fixa = "/IRIS_teste01/";
+$rota_fixa = "/dxa.pt/iris_teste01/";
 
 $rota = str_replace($rota_fixa, "", $rota_completa);
-
+// echo $rota;
 $rotas = explode("/", $rota);
 $rota_form = explode("?", $rota);
+// print_r($rota_form);
 // echo explode("=",$rota_form[1]);
 // $cat2sel=explode("=",$rota_form[1]);
 // echo $cat2sel[1];
 // echo $rota;
-// print_r($rotas);
+print_r($rotas);
 
 if (isset($rotas[1])) {
     $detalhe = $rotas[1];
@@ -27,9 +27,11 @@ if (isset($rotas[1])) {
 
 if (!empty($rota_form[1])) {
     $rota_final = $rota_form;
-    // echo $rota_final[1];
+    // echo $rota_final[3];
+    // print_r($rota_form);
 } else {
     $rota_final = $rotas;
+    // print_r($rota_form);
 }
 //  echo $rotas[2];
 //  echo "<br>";
@@ -46,11 +48,11 @@ if (!empty($rota_form[1])) {
 //  echo "<br>";
 //  echo $rota_form[0];
 //  echo "<br>";
-//  echo $rota_final[0];
+//  echo $rota_final[3];
 
-if ($rotas[0] != "backoffice") {
+if ($rotas[3] != "backoffice") {
 
-    switch ($rota_final[0]) {
+    switch ($rota_final[3]) {
         case "":
             require("models/home_model.php");
             break;

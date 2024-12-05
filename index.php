@@ -218,12 +218,14 @@ if($form){
                 </p>
             </div>
             <div class="card col-md-3 col-sm-5 col-10">
-                <a href="https://www.sebastiaoalves.com" target="_blank">
+                <a href="https://www.danielxalmeida.pt/sebastiao_alves/" target="_blank">
                     <img src="imagens/sebastiao.gif" alt="">
                 </a>
                 <p>
                     Trabalho final do curso de Web Full-Stack.
                     Um site feito totalmente de raiz, com o respectivo backoffice.
+                    <a class="btn btn-outline-success" href="https://www.danielxalmeida.pt/sebastiao_alves/index.php">Site</a>
+                    <a class="btn btn-outline-info" href="https://www.danielxalmeida.pt/sebastiao_alves/backoffice/index.php">Backoffice</a>
                 </p>
             </div>
         </div>

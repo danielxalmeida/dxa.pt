@@ -13,14 +13,14 @@
                                     <a class="nav-link" href="#">A IRIS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/IRIS_teste01/modelos">Modelos</a>
+                                    <a class="nav-link" href="modelos">Modelos</a>
                                     <!-- Vai para  apagina modelos, sem filtros -->
                                 </li>
                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="/IRIS_teste01/modelos">Pesquisar</a>
                                 </li> -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/IRIS_teste01/envios">Envios</a>
+                                    <a class="nav-link" href="envios">Envios</a>
                                 </li>
                             </ul>
                         </div>
@@ -42,7 +42,7 @@
                                     TELEFONE
                                 </p>
                                 <p class="conteudo-contactos">
-                                    <?= getContactos()["telefone"] ?>
+                                    <?= getContactos("telefone") ?>
                                 </p>
                             </div>
                             <div class="col-4">
@@ -50,7 +50,7 @@
                                     Whatsapp
                                 </p>
                                 <p class="conteudo-contactos">
-                                    <?= getContactos()["whatsapp"] ?>
+                                    <?= getContactos("whatsapp") ?>
                                 </p>
                             </div>
                             <div class="col-4">
@@ -58,7 +58,7 @@
                                     email
                                 </p>
                                 <p class="conteudo-contactos">
-                                    <?= getContactos()["email"] ?>
+                                    <?= getContactos("email") ?>
                                 </p>
                             </div>
                         </div>
@@ -70,18 +70,18 @@
                         <div class="row d-flex justify-content-center text-center overflow-hidden">
                             <div class="col-3 overflow-hidden">
                                 <p class="titulo-contactos d-sm-block d-none">
-                                    <a href="<?= getContactos()["instagram"] ?>" target="_blank">instagram</a>
+                                    <a href="<?= getContactos("instagram") ?>" target="_blank">instagram</a>
                                 </p>
                                 <!-- <p class="conteudo-contactos">
-                                    <?= getContactos()["instagram"] ?>
+                                    <?= getContactos("instagram") ?>
                                 </p> -->
                             </div>
                             <div class="col-3 overflow-hidden">
                                 <p class="titulo-contactos d-sm-block d-none">
-                                    <a href="<?= getContactos()["facebook"] ?>" target="_blank">facebook</a>
+                                    <a href="<?= getContactos("facebook") ?>" target="_blank">facebook</a>
                                 </p>
                                 <!-- <p class="conteudo-contactos">
-                                    <?= getContactos()["facebook"] ?>
+                                    <?= getContactos("facebook") ?>
                                 </p> -->
                             </div>
                             <!-- <div class="col-2">
@@ -89,7 +89,7 @@
                                     Whatsapp
                                 </p>
                                 <p class="conteudo-contactos">
-                                    <?= getContactos()["whatsapp_link"] ?>
+                                    <?= getContactos("whatsapp_link") ?>
                                 </p>
                             </div> -->
                         </div>
