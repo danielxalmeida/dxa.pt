@@ -1,0 +1,123 @@
+<!-- <?php
+
+require_once("funcoes.php");
+
+$form=isset($_POST["username"]) && isset($_POST["password"]);
+//  && !empty($_POST["username"]) && !empty($_POST["password"]);
+
+if($form){
+    $user=$_POST["username"];
+    $pass=$_POST["password"];
+    
+    $utilizador=verificaLoginPass($user,$pass);
+
+    if(!empty($utilizador)){
+
+        date_default_timezone_set("Europe/Lisbon");
+        $data_atual = date("H:i:s - d/m/Y");
+        $id=$utilizador["id"];
+        iduSQL("UPDATE utilizador SET ultimo='$data_atual' WHERE id='$id'");
+        iduSQL("INSERT INTO acessos (id_utilizador,data) VALUES ('$id','$data_atual')");
+
+        header("Location: inicio.php");
+        exit();
+    }
+
+}
+
+?> -->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice</title>
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Estilo BACKOFFICE -->
+    <link rel="stylesheet" href="estilobackoffice.css">
+
+</head>
+
+<body class="bg-dark bg-opacity-25 text-center mt-3 mx-auto">
+    <header class="container-fluid">
+        <div class="row d-flex flex-column align-items-center mx-2">
+            <h1 class="col-12 font-monospace mb-3 fs-1">
+                Backoffice (inicio)
+            </h1>
+            <div class="col-12 border border-dark"></div>
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-light">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button> -->
+                        <!-- <div class="collapse navbar-collapse" id="navbarID"> -->
+                        <div class="navbar-nav text-uppercase">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <button class="btn btn-sm">inicio</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">carousel</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">Home</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">autor</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">livros</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">destaques</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">imprensa</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">contactos</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">redes</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">configurações</button>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-sm">sair</button>
+                            </a>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12 border border-dark"></div>
+        </div>
+    </header>
+    <main class="container my-5">
+        <div class="row w-100 mx-2 bg-body-tertiary border border-1 border-light rounded-5">
+            <div class="col-12 my-4 d-flex flex-column gap-2">
+                <h3>Bem-vindo <?= $utilizador["nome"];?></h3>
+                <h3>O seu último acesso foi em (<?= $utilizador["data"];?>).</h3>
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="container-md">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">titulo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

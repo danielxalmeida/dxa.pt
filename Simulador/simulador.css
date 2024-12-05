@@ -1,0 +1,227 @@
+/* .quadro-geral {
+    width: 500px;
+    height: 500px;
+} */
+/* *{
+    border: 1px solid red;
+} */
+
+/* #tabelaareadivisoes tr td input{
+    width: 50%;
+} */
+
+/* .tabdivisoes .td{
+    width: 31% !important;
+}
+.tabdivisoes .td{
+    width: 23% !important;
+}
+.tabdivisoes .td{
+    width: 23% !important;
+}
+.tabdivisoes .td{
+    width: 23% !important;
+} */
+
+.table {
+    table-layout: fixed; 
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.table4 td:nth-child(1) {
+    width: 25%;
+}
+.table4 td:nth-child(2) {
+    width: 25%;
+}
+.table4 td:nth-child(3) {
+    width: 25%;
+}
+.table4 td:nth-child(4) {
+    width: 25%;
+}
+.table3 td:nth-child(1) {
+    width: 25%;
+}
+.table3 td:nth-child(2) {
+    width: 50%;
+}
+.table3 td:nth-child(3) {
+    width: 25%;
+}
+.table input{
+    width: 100%;
+}
+.table select{
+    width: 100%;
+}
+.loucaswc input, .cozinha-electrodomesticos input{
+    width: 66%
+}
+.linha{
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center !important;
+}
+
+
+
+/* #tabelapavimentos select, #tabelatetos select, #tabelaparedes select,#tabelaroupeiros select{
+    width: 100%;
+}
+#tabelaroupeiros input{
+    width: 100%;
+} */
+
+
+:root {
+    --c1: rgba(0, 0, 0, 0.15);
+    --c2: rgba(221, 170, 4, 0.5);
+    --c3: rgba(221, 170, 4, 1);
+    --c4: rgba(4, 221, 15, 0.5);
+    --c5: rgba(4, 221, 15, 0.75);
+    --c6: rgba(4, 221, 15, 1);
+    --c7: rgba(4, 189, 221, 0.5);
+    --c8: rgba(4, 189, 221, 0.75);
+    --c9: rgba(4, 189, 221, 1);
+}
+
+.esconde {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    width: 100%;
+}
+
+label img {
+    width: 50px;
+    height: 50px;
+}
+
+.espaco{
+    height: 30px !important;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#step-1 input[type=number] {
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    width: 40px;
+}
+#step-1 input[type="number"]::-webkit-inner-spin-button,
+#step-1 input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0; /* Optional: remove default spacing */
+}
+#step-1 input[type="number"] { /* Firefox */
+    -webkit-appearance: none !important;
+    /* margin: 0; */
+  }
+
+
+.divisoes div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c2);
+}
+
+
+.divisoes div input:checked+label {
+    background-color: var(--c1);
+}
+
+.electrodomesticos img{
+    width: 60px;
+}
+
+.electrodomesticos input:checked+label{
+    background-color: var(--c6);
+}
+.electricidade input:checked+label{
+    background-color: var(--c5);
+}
+
+
+.form-step {
+    display: none; /* Hide all sections initially */
+  }
+  
+  .form-step.active {
+    display: block; /* Show the active section */
+  }
+  
+  #submit-button {
+    /* Style the submit button (disabled initially) */
+    opacity: 0.5; /* Optional: Reduce opacity for disabled state */
+  }
+
+
+
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#form-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.step {
+    display: none;
+}
+
+.step-active {
+    display: block;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 2px;
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#next-btn {
+    background-color: #ccc;
+}
+
+#submit-btn {
+    background-color: #008cba;
+    color: white;
+}
+
+
+
+
+.esconde {
+    display: none !important;
+}

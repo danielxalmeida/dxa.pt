@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../fontes/IBMPlexSans-Light.eot');
+    src: url('../fontes/IBMPlexSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fontes/IBMPlexSans-Light.woff2') format('woff2'),
+        url('../fontes/IBMPlexSans-Light.woff') format('woff'),
+        url('../fontes/IBMPlexSans-Light.ttf') format('truetype'),
+        url('../fontes/IBMPlexSans-Light.svg#IBMPlexSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../fontes/IBMPlexSans-Medium.eot');
+    src: url('../fontes/IBMPlexSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fontes/IBMPlexSans-Medium.woff2') format('woff2'),
+        url('../fontes/IBMPlexSans-Medium.woff') format('woff'),
+        url('../fontes/IBMPlexSans-Medium.ttf') format('truetype'),
+        url('../fontes/IBMPlexSans-Medium.svg#IBMPlexSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../fontes/IBMPlexSans-Bold.eot');
+    src: url('../fontes/IBMPlexSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fontes/IBMPlexSans-Bold.woff2') format('woff2'),
+        url('../fontes/IBMPlexSans-Bold.woff') format('woff'),
+        url('../fontes/IBMPlexSans-Bold.ttf') format('truetype'),
+        url('../fontes/IBMPlexSans-Bold.svg#IBMPlexSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fontes/Lato-Black.eot');
+    src: url('../fontes/Lato-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fontes/Lato-Black.woff2') format('woff2'),
+        url('../fontes/Lato-Black.woff') format('woff'),
+        url('../fontes/Lato-Black.ttf') format('truetype'),
+        url('../fontes/Lato-Black.svg#Lato-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fontes/Lato-Bold.eot');
+    src: url('../fontes/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fontes/Lato-Bold.woff2') format('woff2'),
+        url('../fontes/Lato-Bold.woff') format('woff'),
+        url('../fontes/Lato-Bold.ttf') format('truetype'),
+        url('../fontes/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

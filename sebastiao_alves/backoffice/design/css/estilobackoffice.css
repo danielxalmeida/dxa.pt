@@ -1,0 +1,39 @@
+.nav-link button{
+    text-transform: uppercase;
+    /* background-color: yellow;
+    color: white; */
+    font-weight: bold;
+    /* background-color: rgba(139, 195, 74, 0.9); */
+    color: white;
+    background-color: rgba(255, 235, 115, 0.60);
+    border-radius: 10px;
+    font-family: monospace;
+}
+.nav-link.active button{
+    background-color: rgba(140, 200, 75, 0.75);
+}
+table,thead{
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+tr:nth-child(even){
+    background-color: lightgrey;
+}
+.table-carousel img{
+    width: 150px !important;
+}
+tr:hover{
+    background-color: rgb(236, 234, 224);
+    border: 1px solid darkgrey;
+}
+.divisoria{
+    border: 1px dashed black;
+}
+td form button{
+    border: none;
+    background-color: rgba(160, 52, 52, 0.281);
+    text-transform: uppercase;
+}
+td form {
+    display: inline-block;
+}

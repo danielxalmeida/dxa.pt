@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- https://fontawesome.com/icons/ -->
+    <link rel="stylesheet" href="simulador.css">
+    <!-- <script src="main.js"></script> -->
+    <script src="funcoes.js"></script>
+
+</head>
+
+<body>
+    <header class="text-center border border-5">
+        <h1>Simulador JavaScript+php</h1>
+    </header>
+    <main>
+        <div class="container bg-black">
+            <h1>Simulador para obras</h1>
+            <div id="form-container">
+                <form action="calculos.php" method="get" id="project-form" autocomplete="off">
+                    <div class="row border my-5 step step-active questao-1" id="step-1">
+                        <div class="col-12 divisoes d-flex flex-wrap justify-content-center p-0 m-0">
+                            <div class="col-6 col-sm-4 saladeestar">
+                                <input type="checkbox" class="hidden" name="salaestar" value="1" id="salaestar">
+                                <label for="salaestar" class=" p-0 m-0">
+                                    <span class="d-flex flex-column align-items-center">
+                                        <h3>Sala</h3>
+                                        <img src="sofa.svg" alt="Sala" class="w-100">
+                                        <p class="espaco h-100 w-100 d-flex p-0 m-0 justify-content-center"></p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-sm-4 cozinha">
+                                <input type="checkbox" class="hidden" name="cozinha" value="1" id="cozinha">
+                                <label for="cozinha">
+                                    <span class="d-flex flex-column align-items-center">
+                                        <h3>Cozinha</h3>
+                                        <img src="cozinha.svg" alt="cozinha" class="w-100">
+                                        <p class="espaco h-100 w-100 d-flex p-0 m-0 justify-content-center"></p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-sm-4 quartos d-flex justify-content-center align-content-center">
+                                <input type="checkbox" class="hidden" name="quartos" value="1" id="quartos">
+                                <label for="quartos">
+                                    <span class="d-flex flex-column align-items-center">
+                                        <h3>Quartos</h3>
+                                        <img src="quartos.svg" alt="quartos" class="w-100">
+                                        <p class="w-100 d-flex p-0 m-0 justify-content-center">
+                                            <button type="button" id="menos"
+                                                onclick="menosValor('numerodequartos');">-</button>
+                                            <input type="number" step="1" min="1" max="9" name="numquartos" value="1"
+                                                id="numerodequartos">
+                                            <button type="button" id="mais"
+                                                onclick="maisValor('numerodequartos');">+</button>
+                                        </p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-sm-4 circulacao">
+                                <input type="checkbox" class="hidden" name="circulacao" value="1" id="circulacao">
+                                <label for="circulacao">
+                                    <span class="d-flex flex-column align-items-center">
+                                        <h3>Circulação</h3>
+                                        <img src="circulacao.svg" alt="circulacao" class="w-100">
+                                        <p class="espaco h-100 w-100 d-flex p-0 m-0 justify-content-center"></p>
+                                    </span>
+                                </label>
+
+                            </div>
+                            <div class="col-6 col-sm-4 wc">
+                                <input type="checkbox" class="hidden" name="wc" value="1" id="wc">
+                                <label for="wc">
+                                    <span class="d-flex flex-column align-items-center">
+                                        <h3>WC's</h3>
+                                        <img src="wc.svg" alt="wc" class="w-100">
+                                        <p class="w-100 d-flex p-0 m-0 justify-content-center">
+
+                                            <button type="button" id="menos"
+                                                onclick="menosValor('numerowc');">-</button>
+                                            <input type="number" step="1" min="1" max="9" name="numerowc" value="1"
+                                                id="numerowc">
+                                            <button type="button" id="mais" onclick="maisValor('numerowc');">+</button>
+                                        </p>
+                                </label>
+                            </div>
+                        </div>
+                        <p id="step-1-error" class="error"></p>
+                    </div>
+                    <div class="row border my-5 step questao-2 areas" id="step-2">
+                        <div class="col-12">
+                            <h3>areas</h3>
+                            <p>
+                            <table class="table w-100 table4">
+                                <thead>
+                                    <th class="divisao">Divisão</th>
+                                    <th class="comprimento">Comprimento (em metros)</th>
+                                    <th class="largura">Largura (em metros)</th>
+                                    <th class="altura">Altura (em metros)</th>
+                                </thead>
+                                <tbody id="tabelaareadivisoes">
+                                </tbody>
+                            </table>
+                            </p>
+                            <p id="total-area">
+                            </p>
+                        </div>
+                        <p id="step-2-error" class="error"></p>
+                    </div>
+                    <div class="questao-3 row border my-5 step pavimentos" id="step-3">
+                        <div class="col-12 divisoes d-flex flex-column align-items-center justify-content-center">
+                            <div class="col-6 col-sm-4">
+                                <input type="checkbox" class="hidden" name="pavimentos" value="1" id="pavimentos">
+                                <label for="pavimentos">
+                                    <span class="d-flex flex-column align-items-center">
+                                        <h3>Pavimentos</h3>
+                                        <img src="sofa.svg" alt="Sala" class="w-100">
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="col-12 border my-5 questao-4 parte1 d-flex pavimentos esconde w-100"
+                                id="opcoespavimento">
+                                <table class="table table4 w-100 tabpavimentos">
+                                    <thead>
+                                        <th>Divisão</th>
+                                        <th>Opção</th>
+                                        <th>Material</th>
+                                        <th>Qualidade</th>
+                                    </thead>
+                                    <tbody id="tabelapavimentos">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p id="step-3-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-4 tetos divisoes" id="step-4">
+                        <div class="col-12 tetos">
+                            <input type="checkbox" class="hidden" name="tetos" value="1" id="tetos">
+                            <label for="tetos">
+                                <span class="d-flex flex-column align-items-center">
+                                    <h3>tetos</h3>
+                                    <img src="cozinha.svg" alt="tetos" class="w-100">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 esconde" id="opcoestetos">
+                            <table class="table table4 w-100">
+                                <thead>
+                                    <th>Divisão</th>
+                                    <th>Opção</th>
+                                    <th>Material</th>
+                                    <th>acabamento</th>
+                                </thead>
+                                <tbody id="tabelatetos">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="step-4-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-5 divisoes" id="step-5">
+                        <div class="col12  d-flex justify-content-center align-content-center">
+                            <input type="checkbox" class="hidden" name="paredes" value="1" id="paredes">
+                            <label for="paredes">
+                                <span class="d-flex flex-column align-items-center">
+                                    <h3>paredes</h3>
+                                    <img src="quartos.svg" alt="paredes" class="w-100">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 paredes esconde" id="opcoesparedes">
+                            <table class="table table4 w-100">
+                                <thead>
+                                    <th>Divisão</th>
+                                    <th>Opção</th>
+                                    <th>Material</th>
+                                    <th>Acabamentos</th>
+                                </thead>
+                                <tbody id="tabelaparedes">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="step-5-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-6 portas divisoes" id="step-6">
+                        <div class="col-12 portas">
+                            <input type="checkbox" class="hidden" name="portas" value="1" id="portas">
+                            <label for="portas">
+                                <span class="d-flex flex-column align-items-center">
+                                    <h3>portas</h3>
+                                    <img src="circulacao.svg" alt="portas" class="w-100">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 esconde" id="opcoesportas">
+                            <div class="col-12">
+                                <h3>Portas interiores</h3>
+                                <span class="d-flex flex-column align-items-center">
+                                    <p class="col-12 h-25 w-100 d-flex p-3 m-0 justify-content-center align-items-center">
+                                        <button type="button" id="menos" onclick="menosValor('portasi');">-</button>
+                                        <input type="number" step="1" min="0" max="9" name="portasint" value="0"
+                                            id="portasi">
+                                        <button type="button" id="mais" onclick="maisValor('portasi');">+</button>
+                                    </p>
+                                    <p class="col-12">
+                                        <input type="radio" name="portasinteriores" id="portasinterioresmadeira"
+                                            value="1" class="col-2">
+                                        <label for="portasinterioresmadeira" class="col-9">Portas interiores novas em
+                                            madeira</label>
+                                        <input type="radio" name="portasinteriores" id="portasinterioreslacadas"
+                                            value="2" class="col-2">
+                                        <label for="portasinterioreslacadas" class="col-9">Portas interiores novas lacadas</label>
+                                        <input type="radio" name="portasinteriores" id="tintatetolasticarestauradas"
+                                            value="3" class="col-2">
+                                        <label for="tintatetolasticarestauradas" class="col-9">Portas interiores
+                                            restauradas</label>
+                                    </p>
+                                </span>
+                            </div>
+
+                            <div class="col-12">
+                                <h3>Portas exteriores</h3>
+                                <span class="d-flex flex-column align-items-center">
+                                    <p class="col-12 h-25 w-100 d-flex p-3 m-0 justify-content-center align-items-center">
+                                        <button type="button" id="menos" onclick="menosValor('portase');">-</button>
+                                        <input type="number" step="1" min="0" max="9" name="portasext" value="0"
+                                            id="portase">
+                                        <button type="button" id="mais" onclick="maisValor('portase');">+</button>
+                                    </p>
+                                    <p class="col-12">
+                                        <input type="radio" name="portasexteriores" id="portasexterioressup" value="1" class="col-2">
+                                        <label for="portasexterioressup" class="col-9">Portas blindadas qualidade superior</label>
+                                        <input type="radio" name="portasexteriores" id="portasexterioresmedalta"
+                                            value="2" class="col-2">
+                                        <label for="portasexterioresmedalta" class="col-9">Portas blindadas qualidade média
+                                            alta</label>
+                                        <input type="radio" name="portasexteriores" id="portasexterioresmed" value="3" class="col-2">
+                                        <label for="portasexterioresmed" class="col-9">Portas blindadas qualidade média</label>
+                                        <input type="radio" name="portasexteriores" id="portasexterioresrestauradas"
+                                            value="4" class="col-2">
+                                        <label for="portasexterioresrestauradas" class="col-9">Portas exteriores
+                                            restauradas</label>
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                        <p id="step-6-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-7 roupeiros divisoes" id="step-7">
+                        <div class="col-12 roupeiros">
+                            <input type="checkbox" class="hidden" name="roupeiros" value="1" id="roupeiros">
+                            <label for="roupeiros">
+                                <span class="d-flex flex-column align-items-center">
+                                    <h3>roupeiros</h3>
+                                    <img src="wc.svg" alt="roupeiros" class="w-100">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 roupeiros esconde" id="opcoesroupeiros">
+                            <h3>Roupeiros</h3>
+                            <p class="w-100 d-flex p-0 m-0 justify-content-center">
+
+                                <button type="button" id="menos"
+                                    onclick="menosValor('nroupeiros');linharoupeiro();">-</button>
+                                <input type="number" step="1" min="0" max="9" name="nroupeiros" value="0"
+                                    id="nroupeiros">
+                                <button type="button" id="mais"
+                                    onclick="maisValor('nroupeiros');linharoupeiro();">+</button>
+
+                            </p>
+                            <table class="table table3 w-100">
+                                <thead>
+                                    <th>Largura</th>
+                                    <th>Altura</th>
+                                    <th>Opções</th>
+                                </thead>
+                                <tbody id="tabelaroupeiros">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="step-7-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-8 janelas divisoes" id="step-8">
+                        <div class="col-12 janelas">
+                            <input type="checkbox" class="hidden" name="janelas" value="1" id="janelas">
+                            <label for="janelas">
+                                <span class="d-flex flex-column align-items-center">
+                                    <h3>caixilharia</h3>
+                                    <img src="wc.svg" alt="janelas" class="w-100">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 janelas esconde" id="opcoesjanelas">
+                            <h3>Janelas</h3>
+                            <p class="w-100 d-flex p-0 m-0 justify-content-center">
+
+                                <button type="button" id="menos"
+                                    onclick="menosValor('njanelas');linhajanelas();">-</button>
+                                <input type="number" step="1" min="0" max="9" name="njanelas" value="0" id="njanelas">
+                                <button type="button" id="mais"
+                                    onclick="maisValor('njanelas');linhajanelas();">+</button>
+
+                            </p>
+                            <p class="material">
+                            <table class="table table3 w-100">
+                                <thead>
+                                    <th>Material</th>
+                                    <th>Qualidade</th>
+                                    <th>cor</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select name="tipojanela" id="mp">
+                                                <option value="3">PVC</option>
+                                                <option value="2">Aluminio</option>
+                                                <option value="1">Madeira</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="qualidadejanelas" id="">
+                                                <option value="3">Superior</option>
+                                                <option value="2">Média Alta</option>
+                                                <option value="1">Média</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="corjanelas" id="">
+                                                <option value="1">Branco</option>
+                                                <option value="3">Duas cores</option>
+                                                <option value="2">Outras</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </p>
+                            <!-- PHP para dimensionar a tabela -->
+                            <table class="table table3 w-100">
+                                <thead>
+                                    <th>Largura</th>
+                                    <th>Altura</th>
+                                    <th>Opções</th>
+                                </thead>
+                                <tbody id="tabelajanelas">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <p id="step-8-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-9 wc" id="step-9">
+                        <div class="col-12 wc">
+                            <p class="material">
+                            <table class="table table3 w-100 loucaswc">
+                                <thead>
+                                    <th>Louça para WC</th>
+                                    <th>Quantidade</th>
+                                    <th>Qualidade</th>
+                                    <!-- <th>cor</th> -->
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            sanita
+                                        </td>
+                                        <td class="linha">
+                                            <button type="button" id="menos" onclick="menosValor('sanita');" class="">-</button>
+                                            <input type="number" step="1" min="0" max="9" name="sanita" value="0"
+                                                id="sanita" class="">
+                                            <button type="button" id="mais" onclick="maisValor('sanita');" class="">+</button>
+
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Superior</option>
+                                                <option value="">Média Alta</option>
+                                                <option value="">Média</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Bidé
+                                        </td>
+                                        <td class="linha">
+                                            <button type="button" id="menos" onclick="menosValor('Bide');">-</button>
+                                            <input type="number" step="1" min="0" max="9" name="Bide" value="0"
+                                                id="Bide">
+                                            <button type="button" id="mais" onclick="maisValor('Bide');">+</button>
+
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Superior</option>
+                                                <option value="">Média Alta</option>
+                                                <option value="">Média</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Duche
+                                        </td>
+                                        <td class="linha">
+                                            <button type="button" id="menos" onclick="menosValor('Duche');">-</button>
+                                            <input type="number" step="1" min="0" max="9" name="Duche" value="0"
+                                                id="Duche">
+                                            <button type="button" id="mais" onclick="maisValor('Duche');">+</button>
+
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Superior</option>
+                                                <option value="">Média Alta</option>
+                                                <option value="">Média</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Banheira
+                                        </td>
+                                        <td class="linha">
+                                            <button type="button" id="menos"
+                                                onclick="menosValor('Banheira');">-</button>
+                                            <input type="number" step="1" min="0" max="9" name="Banheira" value="0"
+                                                id="Banheira">
+                                            <button type="button" id="mais" onclick="maisValor('Banheira');">+</button>
+
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Superior</option>
+                                                <option value="">Média Alta</option>
+                                                <option value="">Média</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Lavatório
+                                        </td>
+                                        <td class="linha">
+                                            <button type="button" id="menos"
+                                                onclick="menosValor('Lavatorio');">-</button>
+                                            <input type="number" step="1" min="0" max="9" name="Lavatorio" value="0"
+                                                id="Lavatorio">
+                                            <button type="button" id="mais" onclick="maisValor('Lavatorio');">+</button>
+
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Superior</option>
+                                                <option value="">Média Alta</option>
+                                                <option value="">Média</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Mobiliário
+                                        </td>
+                                        <td class="linha">
+                                            <button type="button" id="menos"
+                                                onclick="menosValor('Mobiliario');">-</button>
+                                            <input type="number" step="1" min="0" max="9" name="Mobiliario" value="0"
+                                                id="Mobiliario">
+                                            <button type="button" id="mais"
+                                                onclick="maisValor('Mobiliario');">+</button>
+
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Superior</option>
+                                                <option value="">Média Alta</option>
+                                                <option value="">Média</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            </p>
+                        </div>
+                        <p id="step-9-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-10 cozinha" id="step-10">
+                        <div class="col-12 cozinha">
+                            <div class="col-12">
+                                <h3>Bancadas</h3>
+                                <p class="descricao">
+                                    Indique os metros lineares que pretende de armarios e bancadas.
+                                </p>
+                                <table class="table table3 w-100">
+                                    <thead>
+                                        <th></th>
+                                        <th>Material</th>
+                                        <th>Qualidade</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                mobiliario inf
+                                            </td>
+                                            <td>
+                                                <input type="number" name="MobInf" id="MobInf" step="0.1" min="0" class="w-100">
+                                            </td>
+                                            <td>
+                                                <select name="mobinf" id="mobinf">
+                                                    <!-- <option value="2">(manter)</option> -->
+                                                    <option value="3">Superior</option>
+                                                    <option value="2">Média Alta</option>
+                                                    <option value="1">Média</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                mobiliario Sup
+                                            </td>
+                                            <td>
+                                                <input type="number" name="MobSup" id="MobSup" step="0.1" min="0" class="w-100">
+                                            </td>
+                                            <td>
+                                                <select name="mobsup" id="mobsup">
+                                                    <!-- <option value="">(manter)</option> -->
+                                                    <option value="3">Superior</option>
+                                                    <option value="2">Média Alta</option>
+                                                    <option value="1">Média</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                bancadads
+                                            </td>
+                                            <td>
+                                                <select name="bancada" id="bancada">
+                                                    <option value="">(manter)</option>
+                                                    <option value="3">Cerâmica</option>
+                                                    <option value="2">Pedra</option>
+                                                    <option value="1">Outros</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="bancadaq" id="bancadaq">
+                                                    <option value="3">Superior</option>
+                                                    <option value="2">Média Alta</option>
+                                                    <option value="1">Média</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="descricao">
+                                    deixe a 0 se não pretende armarios e bancadas.
+                                </p>
+                            </div>
+                            <div class="col-12 equipamentos d-flex flex-wrap">
+                                <div class="electrodomesticos">
+                                    <div class="col-12 wc">
+                                        <p class="material">
+                                        <table class="table table3 w-100 cozinha-electrodomesticos">
+                                            <thead>
+                                                <th>Electrodomesticos</th>
+                                                <th>Quantidade</th>
+                                                <th>Qualidade</th>
+                                                <!-- <th>cor</th> -->
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Frigorifico
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Frigorifico');" class="">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Frigorifico"
+                                                            value="0" id="Frigorifico" class="">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Frigorifico');" class="">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Frigorificoq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Combinado
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Combinado');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Combinado"
+                                                            value="0" id="Combinado">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Combinado');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Combinadoq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Congelador
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Congelador');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Congelador"
+                                                            value="0" id="Congelador">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Congelador');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Congeladorq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Forno
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Forno');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Forno"
+                                                            value="0" id="Forno">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Forno');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Fornoq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Placa de Fogao
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Placa');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Placa"
+                                                            value="0" id="Placa">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Placa');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Placaq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Microondas
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Microondas');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Microondas"
+                                                            value="0" id="Microondas">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Microondas');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Microondasq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Exaustor
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('Exaustor');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="Exaustor"
+                                                            value="0" id="Exaustor">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('Exaustor');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="Exaustorq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Maquina de lavar louça
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('lavar');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="lavar"
+                                                            value="0" id="lavar">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('lavar');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="lavarq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Maquina de lavar roupa
+                                                    </td>
+                                                    <td class="linha">
+                                                        <button type="button" id="menos"
+                                                            onclick="menosValor('roupa');">-</button>
+                                                        <input type="number" step="1" min="0" max="9" name="roupa"
+                                                            value="0" id="roupa">
+                                                        <button type="button" id="mais"
+                                                            onclick="maisValor('roupa');">+</button>
+
+                                                    </td>
+                                                    <td>
+                                                        <select name="roupaq" id="">
+                                                            <option value="3">Superior</option>
+                                                            <option value="2">Média Alta</option>
+                                                            <option value="1">Média</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="step-10-error" class="error"></p>
+                    </div>
+                    <div class="step row border my-5 questao-11 especialidades" id="step-11">
+                        <div class="col-12 electricidade">
+                            <h3>Rede electrica</h3>
+                            <h4>Aparelhagem</h4>
+                            <select name="aparelhagem" id="aparelhagem">
+                                <option value="0">Manter a actual</option>
+                                <option value="3">Qualidade Superior</option>
+                                <option value="2">Qualidade Média Alta</option>
+                                <option value="1">Qualidade Média</option>
+                            </select>
+                            <h4>Aquecimento de águas</h4>
+                            <select name="aguas" id="aguas">
+                                <option value="0">Manter a actual</option>
+                                <option value="3">Esquentador</option>
+                                <option value="2">Termoacumulador</option>
+                                <option value="1">Painel Solar</option>
+                            </select>
+                            <h4>Esgotos</h4>
+                            <select name="esgotos" id="esgotos">
+                                <option value="0">Manter a actual</option>
+                                <option value="3">Novo</option>
+                            </select>
+                            <h4>rede de gás</h4>
+                            <select name="gas" id="gas">
+                                <option value="0">Manter a actual</option>
+                                <option value="3">Novo</option>
+                            </select>
+                            <h4>Climatização</h4>
+                            <select name="clima" id="clima">
+                                <option value="0">Manter a actual</option>
+                                <option value="3">Ar Condicionado</option>
+                                <option value="2">Aquecimento central</option>
+                                <option value="1">Piso radiante</option>
+                            </select>
+                        </div>
+                        <p id="step-11-error" class="error"></p>
+                    </div>
+                    <button type="button" id="prev-btn">Voltar</button>
+                    <button type="button" id="next-btn">Avançar</button>
+                    <button class="esconde" type="submit" id="submit-btn">Submeter</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

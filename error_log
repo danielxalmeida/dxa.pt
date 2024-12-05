@@ -1,0 +1,109 @@
+[04-Dec-2024 10:07:03 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 5
+[04-Dec-2024 10:08:02 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/danielxa/public_html/index.php on line 20
+[04-Dec-2024 10:09:26 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/danielxa/public_html/index.php on line 20
+[04-Dec-2024 10:09:38 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 5
+[04-Dec-2024 10:09:51 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 5
+[04-Dec-2024 10:10:21 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/danielxa/public_html/index.php on line 20
+[04-Dec-2024 10:11:37 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 5
+[04-Dec-2024 10:17:32 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 5
+[04-Dec-2024 10:18:41 UTC] PHP Warning:  require(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/danielxa/public_html/index.php on line 9
+[04-Dec-2024 10:18:41 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/danielxa/public_html/index.php on line 9
+[04-Dec-2024 10:18:52 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 5
+[04-Dec-2024 10:19:18 UTC] PHP Warning:  require(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/danielxa/public_html/index.php on line 9
+[04-Dec-2024 10:19:18 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/danielxa/public_html/index.php on line 9
+[04-Dec-2024 10:23:23 UTC] PHP Warning:  require(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/danielxa/public_html/index.php on line 10
+[04-Dec-2024 10:23:23 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/PHPMailerAutoload.php' (include_path='/home/danielxa/php:.:/opt/alt/php74/usr/share/pear') in /home/danielxa/public_html/index.php on line 10
+[04-Dec-2024 10:23:26 UTC] PHP Warning:  require(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/danielxa/public_html/index.php on line 10
+[04-Dec-2024 10:23:26 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/PHPMailerAutoload.php' (include_path='/home/danielxa/php:.:/opt/alt/php74/usr/share/pear') in /home/danielxa/public_html/index.php on line 10
+[04-Dec-2024 10:23:56 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home/danielxa/public_html/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/danielxa/public_html/index.php on line 12
+[04-Dec-2024 10:24:01 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home/danielxa/public_html/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/danielxa/public_html/index.php on line 12
+[04-Dec-2024 10:26:11 UTC] PHP Warning:  require(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/danielxa/public_html/index.php on line 9
+[04-Dec-2024 10:26:11 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/PHPMailerAutoload.php' (include_path='/home/danielxa/php:.:/opt/alt/php74/usr/share/pear:/path/to/PHPMailer') in /home/danielxa/public_html/index.php on line 9
+[04-Dec-2024 11:26:48 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 11:36:22 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 11:42:22 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 12:09:01 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 12:46:56 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 12:46:57 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 13:36:47 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 13:50:56 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 14:35:39 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 14:37:32 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/danielxa/public_html/index.php on line 11
+[04-Dec-2024 14:38:24 UTC] PHP Warning:  Use of undefined constant mail - assumed 'mail' (this will throw an Error in a future version of PHP) in /home/danielxa/public_html/index.php on line 22
+[04-Dec-2024 14:38:24 UTC] PHP Warning:  Use of undefined constant danielxalmeida - assumed 'danielxalmeida' (this will throw an Error in a future version of PHP) in /home/danielxa/public_html/index.php on line 22
+[04-Dec-2024 14:38:24 UTC] PHP Warning:  Use of undefined constant pt - assumed 'pt' (this will throw an Error in a future version of PHP) in /home/danielxa/public_html/index.php on line 22
+[04-Dec-2024 15:06:16 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:06:36 UTC] PHP Warning:  A non-numeric value encountered in /home/danielxa/public_html/index.php on line 14
+[04-Dec-2024 15:06:36 UTC] PHP Warning:  A non-numeric value encountered in /home/danielxa/public_html/index.php on line 14
+[04-Dec-2024 15:06:36 UTC] PHP Warning:  A non-numeric value encountered in /home/danielxa/public_html/index.php on line 14
+[04-Dec-2024 15:20:10 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:20:35 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:20:42 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:21:48 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:21:57 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:22:48 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:22:50 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:22:52 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 15:22:52 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 453
+[04-Dec-2024 15:23:24 UTC] PHP Warning:  A non-numeric value encountered in /home/danielxa/public_html/index.en.php on line 14
+[04-Dec-2024 15:23:24 UTC] PHP Warning:  A non-numeric value encountered in /home/danielxa/public_html/index.en.php on line 14
+[04-Dec-2024 15:23:24 UTC] PHP Warning:  A non-numeric value encountered in /home/danielxa/public_html/index.en.php on line 14
+[04-Dec-2024 15:31:18 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:31:20 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:35:11 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 6
+[04-Dec-2024 15:35:45 UTC] PHP Notice:  Undefined variable: contactoemail in /home/danielxa/public_html/index.php on line 18
+[04-Dec-2024 15:35:45 UTC] PHP Notice:  Undefined variable: textoemail in /home/danielxa/public_html/index.php on line 18
+[04-Dec-2024 15:35:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Mail_mime::setHeader() in /home/danielxa/public_html/index.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/danielxa/public_html/index.php on line 19
+[04-Dec-2024 15:37:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Mail_mime::setHeader() in /home/danielxa/public_html/index.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/danielxa/public_html/index.php on line 23
+[04-Dec-2024 15:41:46 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 15:41:46 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 455
+[04-Dec-2024 15:41:48 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 15:42:53 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/danielxa/public_html/index.php on line 27
+[04-Dec-2024 15:44:39 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 15:44:39 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 467
+[04-Dec-2024 15:45:56 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 15:45:56 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 467
+[04-Dec-2024 16:23:42 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 16:23:45 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 16:23:45 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 467
+[04-Dec-2024 16:24:43 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 16:24:43 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 467
+[04-Dec-2024 18:18:22 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 18:43:28 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 18:46:26 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 18:46:26 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 467
+[04-Dec-2024 18:48:22 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 21:25:36 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 21:45:27 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 21:45:52 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 21:50:03 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 22:00:20 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 22:37:18 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 22:37:58 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 22:39:55 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 22:48:29 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 23:27:57 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.en.php on line 6
+[04-Dec-2024 23:27:57 UTC] PHP Notice:  Undefined variable: agradecimento in /home/danielxa/public_html/index.en.php on line 467
+[04-Dec-2024 23:28:16 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[04-Dec-2024 23:29:29 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 07:25:05 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 09:29:07 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 09:29:07 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 10:09:55 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 10:12:23 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 10:12:39 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 10:15:15 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 10:16:52 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7
+[05-Dec-2024 10:17:41 UTC] PHP Notice:  Undefined index: email in /home/danielxa/public_html/index.php on line 7

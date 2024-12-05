@@ -3,15 +3,31 @@
 ini_set("include_path", '/home/danielxa/php:' . ini_get("include_path") );
 include('Mail.php');
 $agradecimento = 0;
-if($_POST['email']){
+
+$form = isset($_POST['email']);
+
+if($form){
 
     require_once "Mail.php";
+    // require_once "Mail/mime.php";
     
     $from = "contact@danielxalmeida.pt";
     $to = "daniel@danielxalmeida.pt";
     
     $subject = $_POST['nome'];
-    $body = $_POST['email'] + "<br>" + $_POST['texto'];
+    $contactoemail = $_POST['email'];
+    $textoemail = $_POST['texto'];
+    
+    // $mime = new Mail_mime();
+
+    // Set HTML body with proper content type
+    // $mime->setHTMLBody("Email: $contactoemail <br> Mensagem: $textoemail");
+    
+    // $mime->setHeader('Content-Type',$mime->getType());
+    
+
+    $body =  "Nome: $subject \n\nEmail: $contactoemail \n\nMensagem: $textoemail";
+    // $body = $mime->get();
     $host = "mail.danielxalmeida.pt";
     
     $username = "contact@danielxalmeida.pt";
@@ -25,6 +41,7 @@ if($_POST['email']){
     'password' => $password));
     
     $mail = $smtp->send($to, $headers, $body);
+    // $mail = $smtp->send($to, $headers, $mime->get());
 
     $agradecimento = 1;
     
@@ -55,9 +72,8 @@ if($_POST['email']){
     <header class="container-fluid">
         <div class="row language">
             <div class="col-12 w-100 d-flex justify-content-end gap-2">
-                <a href="index.html" target="_blank"><button id="pt"
-                        class="contactos shadow border-bottom border-black border-3"></button></a>
-                <a href="dxa.en.html" target="_blank"><button id="en" class="contactos"></button></a>
+                <a href="index.php" target="_blank"><button id="pt" class="contactos shadow border-bottom border-black border-3"></button></a>
+                <a href="index.en.php" target="_blank"><button  id="en" class="contactos"></button></a>
             </div>
         </div>
         <div class="row pessoal align-content-center justify-content-center">
@@ -441,9 +457,9 @@ if($_POST['email']){
 
         </div>
         <div class="row justify-content-center mb-4">
-            <div class="col-4 d-flex flex-column gap-2 justify-content-center text-center">
+            <div class="col-md-6 col-12 d-flex flex-column gap-2 justify-content-center text-center">
                 <h3 class="">Contactos</h3>
-                <?php if($agradecimento != 1): ?>
+                <?php if($agradecimento < 1): ?>
                 <form action="" method="POST">
 
                     <p class="">
