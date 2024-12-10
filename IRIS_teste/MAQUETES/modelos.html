@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos - IRIS</title>
+    <!-- BootStrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="estilos/estilo.css">
+
+</head>
+
+<body>
+    <header class="container-fluid p-0">
+        <div class="row w-100 bg-body-secondary m-0 p-0 text-center">
+            <p class="mt-2">linha de informações</p>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-10 mx-auto border-bottom sticky-top">
+                <!-- NAVBAR -->
+                <nav class="navbar navbar-expand-sm">
+                    <div class="container-fluid d-md-flex flex-sm-column">
+                        <!-- Logo IRIS -->
+                        <a class="navbar-brand" href="#">
+                            <img src="imagens/iris_fundo.jpg" id="IRIS-navbar" alt="Logo IRIS">
+                        </a>
+                        
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">A IRIS</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Modelos
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="modelos.html">Listar</a></li>
+                                        <li><a class="dropdown-item" href="modelos.html">todos</a></li>
+                                        <li><a class="dropdown-item" href="modelos.html">os</a></li>
+                                        <li><a class="dropdown-item" href="modelos.html">Modelos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Envios</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <!-- 
+
+            Container do tipo col 10, centrado
+            Barra lateral (col-2?) com diversos filtros (de acordo com o tipo de produto.)
+            resto do corpo com os produtos. 
+            
+            em baixo, a paginação.
+
+        -->
+
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="container d-flex">
+                    <div class="row">
+                        <div class="col-md-3 col-12 align-content-start">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="fs-4">CATEGORIA 1:</p>
+                                    <p>
+                                        <input type="radio" id="pequeno" name="cat1" value="pequeno" checked >
+                                        <label for="pequeno" class="text-capitalize">pequeno</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio" id="medio" name="cat1" value="medio">
+                                        <label for="medio" class="text-capitalize">medio</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio" id="grande" name="cat1" value="grande">
+                                        <label for="grande" class="text-capitalize">grande</label>
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <p class="fs-4">CATEGORIA 2:</p>
+                                    <p>
+                                        <input type="radio" id="brilhante" name="cat2" value="brilhante" checked >
+                                        <label for="brilhante" class="text-capitalize">brilhante</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio" id="mate" name="cat2" value="mate">
+                                        <label for="mate" class="text-capitalize">mate</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-12">
+                            <div class="row lista-produtos-cards d-flex">
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 card-produtos">
+                                    <a href="produto.html" class="text-decoration-none text-black">
+                                        <img src="imagens/br_2c_2.jpg" alt="" class="w-100">
+                                        <h3 class="text-center">Lindos :)</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer class="container-fluid p-0">
+
+        <div class="row text-center"><!-- NAVBAR -->
+            <div class="col-md-10 mx-auto border-bottom sticky-top">
+                
+                <nav class="navbar navbar-expand-sm">
+                    <div class="container-fluid d-md-flex flex-sm-column">
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">A IRIS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Modelos</a>
+                                    <!-- sobe a pagina, como o sebastião -->
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pesquisar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Envios</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row px-5"><!-- <p class="mt-2">Linha de contactos e redes sociais.</p> -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-8 d-sm-block d-none">
+                        <div class="row text-center">
+                            <p>Contactos</p>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <p class="titulo-contactos">
+                                    TELEFONE
+                                </p>
+                                <p class="conteudo-contactos">
+                                    999888777
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <p class="titulo-contactos">
+                                    TELEFONE
+                                </p>
+                                <p class="conteudo-contactos">
+                                    999888777
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <p class="titulo-contactos">
+                                    TELEFONE
+                                </p>
+                                <p class="conteudo-contactos">
+                                    999888777
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row text-center d-sm-block d-none">
+                            <p>redes-sociais</p>
+                        </div>
+                        <div class="row d-flex justify-content-center text-center">
+                            <div class="col-2">
+                                <p class="titulo-contactos d-sm-block d-none">
+                                    Instangram
+                                </p>
+                                <p class="conteudo-contactos">
+                                    LINK!!
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <p class="titulo-contactos d-sm-block d-none">
+                                    facebook
+                                </p>
+                                <p class="conteudo-contactos">
+                                    LINK!!
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <p class="titulo-contactos d-sm-block d-none">
+                                    Whatsapp
+                                </p>
+                                <p class="conteudo-contactos">
+                                    LINK!!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+        </div>
+        <div class="row w-100 bg-body-secondary m-0 p-0 text-center">
+            <p class="mt-2">linha de informações</p>
+        </div>
+    </footer>
+</body>
+
+</html>

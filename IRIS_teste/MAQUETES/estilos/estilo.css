@@ -1,0 +1,127 @@
+/* Para página do tipo BEM HAJA */
+#IRIS-navbar {
+    max-width: 200px;
+}
+
+.imagem-capa-home {
+    width: 100vw !important;
+    height: 400px;
+    background-image: url(../imagens/br_2c_5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.imagem-card-home {
+    overflow: hidden !important;
+    /* width: auto; */
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+
+.imagem-card-home:hover a img {
+    transform: scale(1.25);
+    /* zoom:125%; */
+    transition-duration: 1.95s;
+    /* overflow: hidden; */
+    z-index: -10 !important;
+    display: block;
+
+}
+
+.imagem-card-home:hover h3 {
+    color: red !important;
+    font-size: 33px;
+    font-weight: bolder;
+    /* background-color: rgba(255, 228, 196, 0.50); */
+    transition-duration: .95s;
+    z-index: 100 !important;
+}
+
+.imagem-card-home a img {
+    display: block;
+    width: 100%;
+}
+
+.texto-centrado-card {
+    position: absolute;
+    /* text-align: center; */
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.imagem-carousel-modelos {
+    /* height: 300px; */
+    /* min-height: 400px; */
+    /* min-width: 400px; */
+    height: 400px;
+}
+
+.imagem-card-modelo {
+    overflow: hidden;
+}
+
+.imagem-card-modelo:hover img {
+    transform: scale(1.50);
+    transition-duration: 1.95s;
+}
+
+.cards-home {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    /* grid-gap: 10px; */
+}
+
+.cards-home div {
+    padding: 50px;
+}
+
+.home1 {
+    grid-column: 1 / span 2;
+    grid-row: 1/ span 2;
+}
+
+.home2 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.home3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.home4 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.home5 {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.home6 {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+}
+
+
+@media screen and (max-width: 992px) {
+    .cards-home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cards-home div{
+        padding: 5px;
+    }
+    .imagem-card-home h3{
+        position: relative;
+        text-align: center;
+    }
+
+}

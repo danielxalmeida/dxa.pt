@@ -1,0 +1,30 @@
+#fundo-iris{
+    background-image: url('../imagens/iris_fundo.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    /* background-size: 50%; */
+    background-repeat: no-repeat;
+}
+/* .caixa-destaques-home{
+    max-height: 400px;
+} */
+.carousel img{
+    /* max-height: 300px; */
+    /* width: 300px !important; */
+}
+
+.carousel-indicators button{
+    background-color: black !important;
+    height: 5px !important;
+    position: relative;
+    bottom: -10px;
+}
+@media screen and (max-width: 767px){
+    .caixa-destaques-home{
+        max-height: auto !important;
+    }
+    .carousel img{
+        max-height: 300px;
+        width: auto;
+    }
+}
